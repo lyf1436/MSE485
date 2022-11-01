@@ -1,0 +1,38 @@
+LAMMPS (23 Jun 2022)
+# Input file for Vacancy Formation Energy
+
+# --------------- INITIALIZATION ------------------
+clear
+units 		metal
+dimension	3
+boundary	p	p    p
+atom_style	atomic
+# ------------------ ATOM DEFINITION -------------------
+variable ao equal 4.242
+
+lattice         fcc 4.242
+Lattice spacing in x,y,z = 4.242 4.242 4.242
+region		simbox block -1.0 1.0 -1.0 1.0 -1.0 1.0
+
+create_box	2 simbox
+Created orthogonal box = (-4.242 -4.242 -4.242) to (4.242 4.242 4.242)
+  1 by 1 by 1 MPI processor grid
+
+lattice 	fcc 4.242  orient x 1 0 0 orient y 0 1 0 orient z 0 0 1
+Lattice spacing in x,y,z = 4.242 4.242 4.242
+create_atoms	1 region simbox
+Created 32 atoms
+  using lattice units in orthogonal box = (-4.242 -4.242 -4.242) to (4.242 4.242 4.242)
+  create_atoms CPU = 0.000 seconds
+
+lattice 	fcc 4.242  origin 0 0 0.5 orient x 1 0 0 orient y 0 1 0 orient z 0 0 1
+Lattice spacing in x,y,z = 4.242 4.242 4.242
+create_atoms	2 region simbox
+Created 32 atoms
+  using lattice units in orthogonal box = (-4.242 -4.242 -4.242) to (4.242 4.242 4.242)
+  create_atoms CPU = 0.000 seconds
+# ------------------------ FORCE FIELDS -----------------------
+pair_style	meam
+pair_coeff * * library.meam Ti N C TiN.meam Ti N C
+ERROR: Incorrect args for pair coefficients (src/MEAM/pair_meam.cpp:238)
+Last command: pair_coeff * * library.meam Ti N C TiN.meam Ti N C
