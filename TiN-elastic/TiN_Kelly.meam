@@ -1,0 +1,48 @@
+rc = 4.6 #cutoff radius, default 4.0
+delr = 0.1 #smoothing, default 0.1
+augt1 = 0 # 0: don’t augment t1 (old meam formulations), default 1
+erose_form = 2 
+ialloy = 2 #averaging rule of t parameters, default 0
+
+#Ti
+zbl(1,1) = 0 #default 1
+nn2(1,1) = 1
+attrac(1,1) = 0
+repuls(1,1) = 0
+Cmin(1,1,1) = 1
+Cmax(1,1,1) = 1.44
+Ec(1,1) = 4.87
+re(1,1) = 2.92
+
+#N
+zbl(2,2) = 0
+nn2(2,2) = 0
+attrac(2,2) = 0
+repuls(2,2) = 0
+Cmin(2,2,2) = 2
+Cmax(2,2,2) = 2.8
+Ec(2,2) = 4.88
+re(2,2) = 1.1
+
+#TiN
+zbl(1,2) = 0
+nn2(1,2) = 1 
+Ec(1,2) = 6.615
+re(1,2) = 2.121
+alpha(1,2) = 5.09226184700865 #from example
+attrac(1,2) = 0
+repuls(1,2) = 0
+Cmin(1,1,2) = 0.810
+Cmin(2,2,1) = 1.457
+Cmin(1,2,1) = 0.160
+Cmin(1,2,2) = 0.090
+Cmin(2,1,1) = 0.160
+Cmin(2,1,2) = 0.090
+Cmax(1,1,2) = 1.440
+Cmax(2,2,1) = 2.800
+Cmax(1,2,1) = 2.800
+Cmax(1,2,2) = 2.800
+Cmax(2,1,1) = 2.800
+Cmax(2,1,2) = 2.800
+lattce(1,2) = 'b1'
+
