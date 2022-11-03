@@ -21,7 +21,7 @@ lattice 	fcc 4.242  origin 0 0 0.5 orient x 1 0 0 orient y 0 1 0 orient z 0 0 1
 create_atoms	2 region simbox
 # ------------------------ FORCE FIELDS -----------------------
 pair_style	meam
-pair_coeff * * library.meam Ti N C TiN.meam Ti N
+pair_coeff * * library.meam Ti N TiN.meam Ti N
 #---------------------------Settings----------------------------
 compute csym all centro/atom fcc
 compute eng all pe/atom 
@@ -35,6 +35,7 @@ thermo_style custom step pe lx ly lz press pxx pyy pzz c_eatoms
 
 # dump 1 all custom 400 dump.relax.1.* id type xs ys zs c_csym c_eng 
 dump 1 all custom 400 dump.relax.1.* id element type xs ys zs c_csym c_eng 
+dump_modify 1 element Ti N
 
 min_style cg
 minimize 1e-15 1e-15 5000 5000
@@ -70,6 +71,7 @@ thermo_style custom step pe lx ly lz press pxx pyy pzz c_eatoms
 
 # dump 1 all custom 400 dump.relax.2.* id type xs ys zs c_csym c_eng 
 dump 1 all custom 400 dump.relax.2.* id type element xs ys zs c_csym c_eng 
+dump_modify 1 element Ti N
 
 min_style cg
 minimize 1e-15 1e-15 5000 5000
