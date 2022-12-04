@@ -1,0 +1,14 @@
+LAMMPS (23 Jun 2022 - Update 1)
+Lattice spacing in x,y,z = 4.242 4.242 4.242
+Created triclinic box = (-4.242 -4.242 -4.242) to (4.242 4.242 4.242) with tilt (0 0 0)
+  1 by 1 by 1 MPI processor grid
+Lattice spacing in x,y,z = 4.242 4.242 4.242
+Created 32 atoms
+  using lattice units in triclinic box = (-4.242 -4.242 -4.242) to (4.242 4.242 4.242) with tilt (0 0 0)
+  create_atoms CPU = 0.000 seconds
+Lattice spacing in x,y,z = 4.242 4.242 4.242
+Created 32 atoms
+  using lattice units in triclinic box = (-4.242 -4.242 -4.242) to (4.242 4.242 4.242) with tilt (0 0 0)
+  create_atoms CPU = 0.000 seconds
+ERROR: Cannot open MEAM library file  (src/MEAM/pair_meam.cpp:217)
+Last command: pair_coeff * * library_Hf.meam Hf N HfN.meam Hf N
