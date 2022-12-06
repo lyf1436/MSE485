@@ -3,7 +3,7 @@
 
 # Choose potential
 pair_style	meam
-pair_coeff * * library_Hf.meam Hf N HfN.meam Hf N
+pair_coeff * * library_HfN.meam Hf N HfN.meam Hf N
 
 # Setup neighbor style
 neighbor 1.0 nsq

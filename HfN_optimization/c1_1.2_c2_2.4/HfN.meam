@@ -24,13 +24,13 @@ Cmax(2,2,2) = 2.8
 Ec(2,2) = 4.88
 re(2,2) = 1.1
 
-#TiN
+#HfN
 zbl(1,2) = 0
 nn2(1,2) = 1
 rho0(1) = 1
-rho0(2) = 18
-Ec(1,2) = 10.21 #(7.33+4.88-2) 
-re(1,2) = 3.203
+rho0(2) = 18 # unknown
+Ec(1,2) = 10.21 #(7.33+4.88-2) rough calculation
+re(1,2) = 3.203 #rough calculation
 alpha(1,2) = 5.09226184700865
 attrac(1,2) = 0
 repuls(1,2) = 0
