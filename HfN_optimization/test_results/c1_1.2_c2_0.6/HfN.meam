@@ -1,0 +1,45 @@
+rc = 7.38
+delr = 0.1
+augt1 = 0
+erose_form = 2
+ialloy = 2
+
+#Hf
+zbl(1,1) = 0
+nn2(1,1) = 1
+attrac(1,1) = 0
+repuls(1,1) = 0
+Cmin(1,1,1) = 0.66
+Cmax(1,1,1) = 2.28
+Ec(1,1) = 7.33
+re(1,1) = 3.17
+
+#N
+zbl(2,2) = 0
+nn2(2,2) = 0
+attrac(2,2) = 0
+repuls(2,2) = 0
+Cmin(2,2,2) = 2
+Cmax(2,2,2) = 2.8
+Ec(2,2) = 4.88
+re(2,2) = 1.1
+
+#HfN
+zbl(1,2) = 0
+nn2(1,2) = 1
+rho0(1) = 1
+rho0(2) = 18 # unknown
+Ec(1,2) = 10.21 #(7.33+4.88-2) rough calculation
+re(1,2) = 2.269 #rough calculation
+alpha(1,2) = 5.195 # average of Hf and N 
+attrac(1,2) = 0
+repuls(1,2) = 0
+Cmin(1,1,2) = 1.2
+Cmin(2,2,1) = 1.2
+Cmin(1,2,1) = 1.2
+Cmin(2,1,2) = 0.6
+Cmax(1,1,2) = 2.8
+Cmax(2,2,1) = 2.8
+Cmax(1,2,1) = 2.8
+Cmax(2,1,2) = 2.8
+lattce(1,2) = 'b1'

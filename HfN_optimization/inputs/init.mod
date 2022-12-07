@@ -31,7 +31,7 @@ variable cunits string GPa
 # Define minimization parameters
 variable etol equal 0.0 
 variable ftol equal 1.0e-10
-variable maxiter equal 100
+variable maxiter equal 500
 variable maxeval equal 1000
 variable dmax equal 1.0e-2
 
@@ -40,12 +40,12 @@ variable dmax equal 1.0e-2
 
 boundary	p p p
 
-lattice         fcc 4.242
+lattice         fcc 4.538
 region		simbox prism -1.0 1.0 -1.0 1.0 -1.0 1.0 0.0 0.0 0.0
 create_box	2 simbox
-lattice 	fcc 4.242  orient x 1 0 0 orient y 0 1 0 orient z 0 0 1
+lattice 	fcc 4.538 orient x 1 0 0 orient y 0 1 0 orient z 0 0 1
 create_atoms	1 region simbox
-lattice 	fcc 4.242  origin 0 0 0.5 orient x 1 0 0 orient y 0 1 0 orient z 0 0 1
+lattice 	fcc 4.538  origin 0 0 0.5 orient x 1 0 0 orient y 0 1 0 orient z 0 0 1
 create_atoms	2 region simbox
 
 # Need to set mass to something, just to satisfy LAMMPS
