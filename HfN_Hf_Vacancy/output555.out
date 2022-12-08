@@ -1,0 +1,196 @@
+LAMMPS (23 Jun 2022)
+Lattice spacing in x,y,z = 4.54 4.54 4.54
+Created orthogonal box = (0 0 0) to (22.7 22.7 22.7)
+  1 by 1 by 1 MPI processor grid
+Lattice spacing in x,y,z = 4.54 4.54 4.54
+Created 500 atoms
+  using lattice units in orthogonal box = (0 0 0) to (22.7 22.7 22.7)
+  create_atoms CPU = 0.000 seconds
+Lattice spacing in x,y,z = 4.54 4.54 4.54
+Created 500 atoms
+  using lattice units in orthogonal box = (0 0 0) to (22.7 22.7 22.7)
+  create_atoms CPU = 0.000 seconds
+Reading MEAM library file library_HfN.meam with DATE: 2015-02-12
+WARNING: Using 'neigh_modify every 1 delay 0 check yes' setting during minimization (src/min.cpp:187)
+Neighbor list info ...
+  update every 1 steps, delay 0 steps, check yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 9.38
+  ghost atom cutoff = 9.38
+  binsize = 4.69, bins = 5 5 5
+  3 neighbor lists, perpetual/occasional/extra = 2 1 0
+  (1) pair meam, perpetual
+      attributes: full, newton on
+      pair build: full/bin/atomonly
+      stencil: full/bin/3d
+      bin: standard
+  (2) pair meam, perpetual, half/full from (1)
+      attributes: half, newton on
+      pair build: halffull/newton
+      stencil: none
+      bin: none
+  (3) compute centro/atom, occasional, copy from (1)
+      attributes: full, newton on
+      pair build: copy
+      stencil: none
+      bin: none
+Setting up cg style minimization ...
+  Unit style    : metal
+  Current step  : 0
+Per MPI rank memory allocation (min/avg/max) = 19.4 | 19.4 | 19.4 Mbytes
+   Step         PotEng           Lx             Ly             Lz           Press           Pxx            Pyy            Pzz          c_eatoms   
+         0  -10209.973      22.7           22.7           22.7          -5534.3265     -5534.3265     -5534.3265     -5534.3265     -10209.973    
+         1  -10209.973      22.7           22.7           22.7          -5534.3265     -5534.3265     -5534.3265     -5534.3265     -10209.973    
+Loop time of 0.128743 on 1 procs for 1 steps with 1000 atoms
+
+99.0% CPU use with 1 MPI tasks x no OpenMP threads
+
+Minimization stats:
+  Stopping criterion = energy tolerance
+  Energy initial, next-to-last, final = 
+     -10209.9732771867  -10209.9732771867  -10209.9732771867
+  Force two-norm initial, final = 5.4518483e-13 4.7390004e-13
+  Force max component initial, final = 5.1070259e-14 4.2882364e-14
+  Final line search alpha, max atom move = 1 4.2882364e-14
+  Iterations, force evaluations = 1 2
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 0.1233     | 0.1233     | 0.1233     |   0.0 | 95.78
+Neigh   | 0          | 0          | 0          |   0.0 |  0.00
+Comm    | 4.396e-05  | 4.396e-05  | 4.396e-05  |   0.0 |  0.03
+Output  | 0          | 0          | 0          |   0.0 |  0.00
+Modify  | 0          | 0          | 0          |   0.0 |  0.00
+Other   |            | 0.005395   |            |       |  4.19
+
+Nlocal:           1000 ave        1000 max        1000 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:           5859 ave        5859 max        5859 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:         152000 ave      152000 max      152000 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+FullNghs:       304000 ave      304000 max      304000 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 304000
+Ave neighs/atom = 304
+Neighbor list builds = 0
+Dangerous builds = 0
+WARNING: No fixes with time integration, atoms won't move (src/verlet.cpp:60)
+Setting up Verlet run ...
+  Unit style    : metal
+  Current step  : 1
+  Time step     : 0.001
+Per MPI rank memory allocation (min/avg/max) = 18.27 | 18.27 | 18.27 Mbytes
+   Step         PotEng           Lx             Ly             Lz           Press           Pxx            Pyy            Pzz          c_eatoms   
+         1  -10209.973      22.7           22.7           22.7          -5534.3265     -5534.3265     -5534.3265     -5534.3265     -10209.973    
+Loop time of 2.92e-07 on 1 procs for 0 steps with 1000 atoms
+
+1369.9% CPU use with 1 MPI tasks x no OpenMP threads
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 0          | 0          | 0          |   0.0 |  0.00
+Neigh   | 0          | 0          | 0          |   0.0 |  0.00
+Comm    | 0          | 0          | 0          |   0.0 |  0.00
+Output  | 0          | 0          | 0          |   0.0 |  0.00
+Modify  | 0          | 0          | 0          |   0.0 |  0.00
+Other   |            | 2.92e-07   |            |       |100.00
+
+Nlocal:           1000 ave        1000 max        1000 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:           5859 ave        5859 max        5859 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:         152000 ave      152000 max      152000 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+FullNghs:       304000 ave      304000 max      304000 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 304000
+Ave neighs/atom = 304
+Neighbor list builds = 0
+Dangerous builds = 0
+Deleted 1 atoms, new total = 999
+WARNING: Using 'neigh_modify every 1 delay 0 check yes' setting during minimization (src/min.cpp:187)
+Setting up cg style minimization ...
+  Unit style    : metal
+  Current step  : 0
+Per MPI rank memory allocation (min/avg/max) = 19.4 | 19.4 | 19.4 Mbytes
+   Step         PotEng           Lx             Ly             Lz           Press           Pxx            Pyy            Pzz          c_eatoms   
+         0  -10198.458      22.7           22.7           22.7          -7112.4025     -7112.4025     -7112.4025     -7112.4025     -10198.458    
+        10  -10293.9        22.7           22.7           22.7           39803.208      39803.208      39803.208      39803.208     -10293.9      
+        20  -10638.092      22.7           22.7           22.7           257701.99      257701.99      257701.99      257701.99     -10638.092    
+        30  -11671.125      22.7           22.7           22.7           346659.48      346659.48      346659.48      346659.48     -11671.125    
+        40  -84518.517      22.7           22.7           22.7          -1682592.9     -1682592.9     -1682592.9     -1682592.9     -84518.517    
+        50  -190657.98      22.7           22.7           22.7           1311093.4      1268974.5      1132521.1      1531784.5     -190657.98    
+        60  -191435.17      22.7           22.7           22.7           498179.41      518658.96      478218.04      497661.24     -191435.17    
+        70  -191447.61      22.7           22.7           22.7           451815.61      56083.464      871881.37      427482.01     -191447.61    
+        80  -191449.3       22.7           22.7           22.7           440577.65      707711.57      223458.52      390562.86     -191449.3     
+        90  -191449.82      22.7           22.7           22.7           437623.66      389186.31      486654.17      437030.51     -191449.82    
+       100  -200845.01      22.7           22.7           22.7          -227818.31      146597.08     -375777.07     -454274.93     -200845.01    
+       110  -202278.4       22.7           22.7           22.7          -168460.3       478384.89      741013.57     -1724779.4     -202278.4     
+       120  -202868.47      22.7           22.7           22.7          -48805.409      435175.15     -142984.79     -438606.59     -202868.47    
+       130  -203205.69      22.7           22.7           22.7           164392         3221.7843      215283.28      274670.94     -203205.69    
+       140  -203320.23      22.7           22.7           22.7           324405.73      535532.76      214148.25      223536.17     -203320.23    
+       150  -203334.12      22.7           22.7           22.7           368446.24      339151.52      396584.51      369602.69     -203334.12    
+       160  -203337.98      22.7           22.7           22.7           378031.23      358092.07      212900.94      563100.69     -203337.98    
+       170  -203339.81      22.7           22.7           22.7           384134.64      331733.49      511240.78      309429.66     -203339.81    
+       180  -203340.16      22.7           22.7           22.7           385666.37      358127.88      448816.11      350055.12     -203340.16    
+       190  -203340.21      22.7           22.7           22.7           386128.1       377643.89      361574.8       419165.6      -203340.21    
+       200  -203340.4       22.7           22.7           22.7           388994.39      394002.66      417626.43      355354.09     -203340.4     
+       210  -203340.57      22.7           22.7           22.7           391950.12      390497.4       380043.6       405309.37     -203340.57    
+       220  -203340.65      22.7           22.7           22.7           393530.95      390102.76      386394.21      404095.88     -203340.65    
+       230  -203340.77      22.7           22.7           22.7           397614.71      425877.28      266187.09      500779.75     -203340.77    
+       240  -203340.86      22.7           22.7           22.7           399059.71      391918.63      395872.68      409387.81     -203340.86    
+       250  -203340.92      22.7           22.7           22.7           400638.73      391398.71      365472.67      445044.81     -203340.92    
+       260  -203340.97      22.7           22.7           22.7           402520.26      411771.77      393176.98      402612.04     -203340.97    
+       270  -203340.99      22.7           22.7           22.7           403316.71      391897.27      405717.99      412334.87     -203340.99    
+       280  -203341.01      22.7           22.7           22.7           404732.45      403372.97      456294.48      354529.91     -203341.01    
+       290  -203341.05      22.7           22.7           22.7           407280.36      405714         404699.52      411427.55     -203341.05    
+       300  -203341.06      22.7           22.7           22.7           407927.71      406309.02      418801.11      398672.99     -203341.06    
+       310  -203341.06      22.7           22.7           22.7           408077.43      405394.37      408989.11      409848.81     -203341.06    
+       313  -203341.06      22.7           22.7           22.7           408102.63      406452.84      414118.86      403736.19     -203341.06    
+Loop time of 189.025 on 1 procs for 313 steps with 999 atoms
+
+99.4% CPU use with 1 MPI tasks x no OpenMP threads
+
+Minimization stats:
+  Stopping criterion = max force evaluations
+  Energy initial, next-to-last, final = 
+     -10198.4576735008  -203341.062908094  -203341.063074214
+  Force two-norm initial, final = 19.704303 4258.7661
+  Force max component initial, final = 6.5048494 1889.4418
+  Final line search alpha, max atom move = 2.096748e-10 3.9616834e-07
+  Iterations, force evaluations = 313 5007
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 188.88     | 188.88     | 188.88     |   0.0 | 99.92
+Neigh   | 0.016359   | 0.016359   | 0.016359   |   0.0 |  0.01
+Comm    | 0.070409   | 0.070409   | 0.070409   |   0.0 |  0.04
+Output  | 0.0024985  | 0.0024985  | 0.0024985  |   0.0 |  0.00
+Modify  | 0          | 0          | 0          |   0.0 |  0.00
+Other   |            | 0.05331    |            |       |  0.03
+
+Nlocal:            999 ave         999 max         999 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:           5300 ave        5300 max        5300 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:         146461 ave      146461 max      146461 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+FullNghs:       292922 ave      292922 max      292922 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 292922
+Ave neighs/atom = 293.21522
+Neighbor list builds = 2
+Dangerous builds = 0
+All done
+Total number of atoms = 1000
+Initial energy of atoms = -10209.9732771845
+Final energy of atoms = -203341.063074214
+Vacancy formation energy = -193141.299770307
+Total wall time: 0:03:09
