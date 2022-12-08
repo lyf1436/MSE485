@@ -1,0 +1,55 @@
+
+# Find minimum energy fcc configuration
+# Mark Tschopp, 2010
+
+# ---------- Initialize Simulation --------------------- 
+clear 
+units metal 
+dimension 3 
+boundary p p p 
+atom_style atomic 
+atom_modify map array
+
+# ---------- Create Atoms --------------------- 
+lattice         fcc 4.538
+region	box block 0 1 0 1 0 1 units lattice
+create_box	2 box
+
+lattice	fcc 4.538 orient x 1 0 0 orient y 0 1 0 orient z 0 0 1  
+create_atoms 1 box
+
+lattice	fcc 4.538 origin 0 0 0.5 orient x 1 0 0 orient y 0 1 0 orient z 0 0 1  
+create_atoms 2 box
+
+replicate 2 2 2
+
+# ---------- Define Interatomic Potential --------------------- 
+pair_style	meam
+pair_coeff * * library_HfN.meam Hf N HfN.meam Hf N
+ 
+# ---------- Define Settings --------------------- 
+compute eng all pe/atom 
+compute eatoms all reduce sum c_eng 
+
+# ---------- Run Minimization --------------------- 
+reset_timestep 0 
+fix 1 all box/relax iso 0.0 vmax 0.001
+thermo 10 
+thermo_style custom step pe lx ly lz press pxx pyy pzz c_eatoms 
+min_style cg 
+minimize 1e-25 1e-25 5000 10000 
+unfix 1
+
+# ----- perform MD -------
+velocity all create 300.0 123
+fix 1 all nph iso 0.0 0.0 1000.0
+fix 3 all langevin 300.0 300.0 10.0 699483
+
+#----- end MD ------
+thermo 10
+thermo_style custom step lx atoms temp pe lx ly lz press pxx pyy pzz
+
+dump 1 all custom 100 out_100.txt id type element mass x y z 
+dump_modify 1 element Zr N
+
+run 5000
